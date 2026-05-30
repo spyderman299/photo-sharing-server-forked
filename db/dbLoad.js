@@ -25,6 +25,10 @@ async function dbLoad() {
   const mapFakeId2RealId = {};
   for (const user of userModels) {
     userObj = new User({
+      // login_name defaults to the lowercase first name (e.g. "ian", "ellen").
+      // Every seeded account uses the password below so you can log in to test.
+      login_name: user.first_name.toLowerCase(),
+      password: "weak123",
       first_name: user.first_name,
       last_name: user.last_name,
       location: user.location,

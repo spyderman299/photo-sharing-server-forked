@@ -1,22 +1,15 @@
 {
-  "name": "nodejs-sandbox",
+  "name": "photo-sharing-server",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.html",
+  "description": "Photo sharing app backend (Final Project: login, comments, upload, registration)",
+  "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/codesandbox-app/static-template.git"
+    "start": "nodemon index.js",
+    "load": "node ./db/dbLoad.js"
   },
   "keywords": [],
-  "author": "Ives van Hoorne",
+  "author": "",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/codesandbox-app/static-template/issues"
-  },
-  "homepage": "https://github.com/codesandbox-app/static-template#readme",
   "devDependencies": {
     "nodemon": "^3.0.1"
   },
@@ -24,6 +17,8 @@
     "cors": "2.8.5",
     "dotenv": "16.4.5",
     "express": "4.19.2",
-    "mongoose": "8.3.3"
+    "jsonwebtoken": "9.0.2",
+    "mongoose": "8.3.3",
+    "multer": "1.4.5-lts.1"
   }
 }
